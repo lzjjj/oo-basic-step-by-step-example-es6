@@ -48,7 +48,6 @@ describe("Person", () => {
             it("should print Leader role, given student is leader", () => {
                 const klass = new Class(2);
                 const student = new Student(1, "Tom", 21, klass);
-
                 klass.assignLeader(student);
                 const introduce = student.introduce();
 
@@ -112,9 +111,7 @@ describe("Class", () => {
             const klass = new Class(2);
             const otherKlass = new Class(3);
             const student = new Student(1, "Jerry", 21, otherKlass);
-
             klass.assignLeader(student);
-
             expect(klass.leader).not.equal(student);
         });
     });
